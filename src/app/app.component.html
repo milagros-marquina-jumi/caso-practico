@@ -2,10 +2,25 @@
   <div class="row vh-100">
     <div class="col-sm-10 col-md-6 col-lg-6 mx-auto d-table h-100">
       <div class="d-table-cell align-middle">
-        <div class="card">
-          <div class="card-body background">
+        <div class="card ">
+          <div class="card-body background-img">
+            <div class="row text-center">
+              <div class="col-sm-6">
+                <label class="text">Aves Rosas</label>
+                <p class="texto">{{scoreRosa}}</p>
+              </div>
+              <div class="col-sm-6">
+                <label class="texto">Aves Azules</label>
+                <p class="texto">{{scoreAzul}}</p>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-sm-12">
+                <label class="text">Tiempo restante</label>
+                <p class="texto">{{time}}</p>
+              </div>
+            </div>
             <div class="row">
-
               <div class="col-sm-4" *ngFor="let item of cantHouses;">
                 <img src="/assets/img/casaPajaros.png" style="width: 100%;">
               </div>
