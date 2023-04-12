@@ -7,22 +7,26 @@
             <div class="row text-center">
               <div class="col-sm-6">
                 <label class="text">Aves Rosas</label>
-                <p class="texto">{{scoreRosa}}</p>
+                <p class="text">{{scoreRosa}}</p>
               </div>
               <div class="col-sm-6">
-                <label class="texto">Aves Azules</label>
-                <p class="texto">{{scoreAzul}}</p>
+                <label class="text">Aves Azules</label>
+                <p class="text">{{scoreAzul}}</p>
               </div>
             </div>
             <div class="row text-center">
               <div class="col-sm-12">
                 <label class="text">Tiempo restante</label>
-                <p class="texto">{{time}}</p>
+                <p class="text">{{time}}</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-4" *ngFor="let item of cantHouses;">
-                <img src="/assets/img/casaPajaros.png" style="width: 100%;">
+              <div class="col-sm-4" *ngFor="let item of birds;">
+                <div>
+                  <img src="/assets/img/casaPajaros.png" style="width: 100%;">
+                  <img *ngIf="item.visibility" src="/assets/img/{{item.img}}" style="width: 100%;"
+                    class="forward-image">
+                </div>
               </div>
             </div>
           </div>
