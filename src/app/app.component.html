@@ -1,17 +1,20 @@
 <div class="container d-flex flex-column">
   <div class="row vh-100">
     <div class="col-sm-10 col-md-6 col-lg-6 mx-auto d-table h-100">
+
       <div class="d-table-cell align-middle">
-        <div class="card ">
-          <div class="card-body background-img">
-            <div class="row text-center">
+        <button class="btn btn-primary" (click)="fnPlay()" *ngIf="gameOver && time == 0">INICIAR JUEGO</button>
+        <div class="card">
+          <div class="card-body">
+
+            <div class="row text-center" [ngStyle]="{'font-size': sizeScore +'px'}">
               <div class="col-sm-6">
                 <label class="text">Aves Rosas</label>
-                <p class="text">{{scoreRosa}}</p>
+                <p class="text">{{scorePink}}</p>
               </div>
               <div class="col-sm-6">
                 <label class="text">Aves Azules</label>
-                <p class="text">{{scoreAzul}}</p>
+                <p class="text">{{scoreBlue}}</p>
               </div>
             </div>
             <div class="row text-center">
@@ -24,8 +27,8 @@
               <div class="col-sm-4" *ngFor="let item of birds;">
                 <div>
                   <img src="/assets/img/casaPajaros.png" style="width: 100%;">
-                  <img *ngIf="item.visibility" src="/assets/img/{{item.img}}" style="width: 100%;"
-                    class="forward-image">
+                  <img (click)="fnCaptureBird(item)" *ngIf="item.visibility" src="/assets/img/{{item.img}}"
+                    style="width: 100%;" class="forward-image">
                 </div>
               </div>
             </div>
