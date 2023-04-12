@@ -6,14 +6,13 @@ import { Bird } from './models/Bird';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  cantHouses = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   birds: Bird[] = []
   scorePink: number = 0;
   scoreBlue: number = 0;
   maxBird: number = 9;
   time: number = 0;
   previousRandom: number = 0;
-  gameOver: Boolean = false;
+  gameOver: Boolean = true;
   sizeScore: number = 0;
 
   constructor() { }

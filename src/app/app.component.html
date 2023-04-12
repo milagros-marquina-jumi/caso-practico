@@ -4,6 +4,7 @@
 
       <div class="d-table-cell align-middle">
         <button class="btn btn-primary" (click)="fnPlay()" *ngIf="gameOver && time == 0">INICIAR JUEGO</button>
+        <span *ngIf="gameOver==true && time ==0">Suma total: {{scorePink+scoreBlue}}</span>
         <div class="card">
           <div class="card-body">
 
@@ -18,7 +19,7 @@
               </div>
             </div>
             <div class="row text-center">
-              <div class="col-sm-12">
+              <div class="col-sm-12" [ngClass]="{'alert-end': time <=10}">
                 <label class="text">Tiempo restante</label>
                 <p class="text">{{time}}</p>
               </div>
