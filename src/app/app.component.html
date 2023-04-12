@@ -3,8 +3,10 @@
     <div class="col-sm-10 col-md-6 col-lg-6 mx-auto d-table h-100">
 
       <div class="d-table-cell align-middle">
-        <button class="btn btn-primary" (click)="fnPlay()" *ngIf="gameOver && time == 0">INICIAR JUEGO</button>
-        <span *ngIf="gameOver==true && time ==0">Suma total: {{scorePink+scoreBlue}}</span>
+        <div class="mb-2">
+          <button class="btn btn-primary mr-2" (click)="fnPlay()" *ngIf="gameOver && time == 0">INICIAR JUEGO</button>
+          <span *ngIf="gameOver && time ==0"><strong>Suma total:</strong> {{scorePink+scoreBlue}}</span>
+        </div>
         <div class="card">
           <div class="card-body">
 
